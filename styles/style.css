@@ -1,0 +1,265 @@
+/* importacao das fontes usadas no meu projeto */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* variaveis usadas */
+:root {
+    --fonte-roboto: "Roboto", sans-serif;
+    --fonte-open-sans: "Open Sans", sans-serif;
+    --weight-bold: 700;
+    --weight-regular: 400;
+    --weight-medium: 500;
+}
+
+/* reset padrao */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* corpo da pagina */
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #d5d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* container principal */
+.container {
+    width: 70vw;
+    height: 90vh;
+}
+
+/* container(lado) esquerdo */
+.container__esquerda {
+    background-color: #FFFFFF;
+    width: 45%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding: 76px 16px 0 86px;
+}
+
+/* Titulo (Digital) */
+h1 {
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-bold);
+    font-size: 25px;
+    color: #3751FE;
+    margin-bottom: 64px;
+}
+
+/* Descricao (Artificial intelligence driving...) */
+h2 {
+    font-family: var(--fonte-open-sans);
+    font-weight: var(--weight-bold);
+    font-size: 30px;
+    color: #3751FE;
+    margin-bottom: 28px;
+}
+
+/* organizando as escritas (h1 h2 p) */
+.container__esquerda__textos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 65px;
+}
+
+/* editando o paragrafo (Welcome back!...) */
+.container__esquerda__textos p {
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    color: #000000;
+    opacity: 61%;
+}
+
+/* criando a borda do email e senha e adicionando um espacamento dentro delas nos dois ao mesmo tempo */
+.container__esquerda__login__email,
+.container__esquerda__login__senha {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C1BBBB;
+    padding: 12px 0 12px 23px;
+    gap: 6px;
+}
+
+/* retirando o efeito das bordas e dos efeitos ao clicar dos inputs do email e da senha */
+.container__esquerda__login__email input,
+.container__esquerda__login__senha input {
+    outline: none;
+    border: none !important;
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-medium);
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* editando a fonte do ('Email Adress' e do 'Password') */
+.container__esquerda__login label {
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 15px;
+    color: #000000;
+    opacity: 61%;
+}
+
+/* criando um efeito ao clicar nas opcoes de email e senha */
+.container__esquerda__login :focus-within {
+    border-left: 3px solid #3751FE;
+}
+
+/* editando a fonte do ('hakeem@...' e do '*****...') */
+.container__esquerda__login ::placeholder {
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-medium);
+    font-size: 14px;
+    color: #3751FE;
+}
+
+/* espacando a caixa de email/senha das opcoes de lembrar */
+.container__esquerda__login__senha {
+    margin-bottom: 21px;
+}
+
+/* editando o "remember me" e "forgot password" */
+.container__esquerda__opcoes {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 22px;
+    margin-bottom: 45px;
+}
+
+/* retirando o sublinhado do "Forgot Password" */
+.container__esquerda__opcoes__esqueci {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* aplicando um distanciamento entre os botoes (Login e Sign Up) */
+.container__esquerda__botoes {
+    display: flex;
+    gap: 33px;
+    margin-bottom: 64px;
+}
+
+/* customizando o botao "Login" */
+.container__esquerda__botoes__entrar {
+    border: 1px solid #3751FE;
+    background-color: #3751FE;
+    color: #FFFFFF;
+    padding: 17px 38px 16px 46px;
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* customizando o botao "Sign Up" */
+.container__esquerda__botoes__cadastro {
+    border: 1px solid #3751FE;
+    background-color: #FFFFFF;
+    color: #3751FE;
+    padding: 17px 38px 16px 46px;
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* customizando os logins alternativos */
+.container__esquerda__login-alternativo {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* customizando paragrafo "Or login with" */
+.container__esquerda__login-alternativo__texto {
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 18px;
+    color: #000000;
+    opacity: 61%;
+}
+
+/* customizando "Facebook / Linkedin / Google" */
+.container__esquerda__login-alternativo__rede-social {
+    font-family: var(--fonte-roboto);
+    font-weight: bold;
+    font-size: 18px;
+    color: #3751FE;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+/* container(lado) direito */
+.container__direita {
+    background-color: rgba(244, 244, 244, 0.99);
+    width: 55%;
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* organizando e centralizando os elementos do container da direita (cabecalho e imagem) */
+.container__direita__nav-e-foto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 71px;
+    margin-bottom: 195px;
+}
+
+/* organizando o cabecalho */
+.container__direita__nav-e-foto__cabecalho {
+    display: flex;
+    gap: 50px;
+}
+
+/* customizando a navegacao */
+.container__direita__nav-e-foto__cabecalho a {
+    text-decoration: none;
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 24px;
+    color: #000000;
+    opacity: 61%;
+}
+
+/* customizando o cabecalho / hover dele */
+.container__direita__nav-e-foto__cabecalho a {
+    text-decoration: none;
+    font-family: var(--fonte-roboto);
+    font-weight: var(--weight-regular);
+    font-size: 24px;
+    color: #000000;
+    opacity: 61%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    /* testando */
+    transition: border-color 0.3s ease-in-out;
+    /* testando */
+}
+
+/* adicionando um efeito visual ao passar o mouse sobre o cabecalho */
+.container__direita__nav-e-foto__cabecalho a:hover {
+    border-bottom: 2px solid #3751FE;
+}
+
+/* imagem */
+.container__direita__nav-e-foto__imagem {
+    box-sizing: border-box;
+    height: 355px;
+    width: 680px;
+}
